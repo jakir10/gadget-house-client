@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "GAMING HEADSET",
+        "price": "700",
+        "description": "This new headset, from the award-winning Dutch games accessories designer SteelSeries, runs two simultaneous inputs: one wired, the other wireless. The wired connection, which is faster, channels the audio from gameplay, leaving the Bluetooth connection open for music or chatting to your fellow motorists, wizards, gunmen etc.",
+        "quantity": "20",
+        "supplieName": "SteelSeries Arctis 3",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVNt7R1skAuOE9K5mFGEmpRz1RnbfDYuAsRg&usqp=CAU"
+    },
+    {
+        "id": 2,
+        "name": "CONSOLE",
+        "price": "1000",
+        "description": "While it can’t compete with the monstrous processing power or online multiplayer capacities of its rivals, this modular gaming tablet offers an entirely new approach to video-gaming, merging the Wii and the DS in a convivial hybrid. As testament to its success, more and more non-Nintendo games are being released for the device and video streaming services are coming soon.",
+        "quantity": "25",
+        "supplierName": "NVIDIA ",
+        "img": "https://i.guim.co.uk/img/media/e213f9c9b91a791b111d0d1bc77bbc5f862bf9b9/0_0_3780_2268/master/3780.jpg?width=620&quality=85&auto=format&fit=max&s=34c462d4293361f20df63781c14b955a"
+    },
+    {
+        "id": 3,
+        "name": "CAMERA",
+        "price": "15000",
+        "description": "This powerful camera has a limitless catalogue of impressive specifications: physical and digital image stabilisation, extensive weatherproofing and professional-standard 4K video capacity. Sleek and neat, it’s a mirrorless number that seriously troubles its SLR competitors, and could easily become the videographer’s weapon of choice.",
+        "quantity": "10",
+        "supplierName": "panasonic ",
+        "img": "https://media.istockphoto.com/photos/weve-made-it-all-this-way-i-am-proud-picture-id904172104?b=1&k=20&m=904172104&s=170667a&w=0&h=cpH1h5ENopSwP2hB-zlAxeg3Gry9KkcBReSsBV1zyzQ="
+    },
+    {
+        "id": 4,
+        "name": "SMARTWATCH",
+        "price": "3500",
+        "description": "The newest Apple Watch has severed the umbilical cord that tied it to the iPhone, allowing you to leave the house without it and still receive calls on the hoof. It’s also now connected to Apple Music, so you can demand almost any song you like and the ever-obedient Siri will oblige.",
+        "quantity": "45",
+        "supplierName": "Apple Watch 3",
+        "img": "https://i.guim.co.uk/img/media/2593f3f62dab7057c9cb8a99c539afd06114b7d3/268_119_678_407/master/678.jpg?width=620&quality=85&auto=format&fit=max&s=5ce181d3c73e250276e32018389f0253"
+    },
+    {
+        "id": 5,
+        "name": "SECURITY CAMERA",
+        "price": "2500",
+        "description": "For the vigilant and nervy among us, Nest’s IQ indoor and outdoor security cameras automatically identify human beings and even recognise their faces, alerting you via your phone. Add to that its infrared night vision, live warning speaker and multi-axis rotation, and you can turn your home into a cosy Orwellian utopia.",
+        "quantity": "27",
+        "supplierName": "Nest Cam IQ",
+        "img": "https://i.guim.co.uk/img/media/78bb57acc04d99efb5016a0c1110a9dd23cb37a0/283_148_1853_1112/master/1853.jpg?width=620&quality=85&auto=format&fit=max&s=bcedb1dfa9441efa08272c9995e92e37"
+    },
+    {
+        "id": 6,
+        "name": "VR HEADSET",
+        "price": "4500",
+        "description": "Frequently described as the first headset to live up to the VR hype, the HTC Vive has been updated this year, and continues to attract games developers for its uniquely immersive experience. Movements of the headset and controllers are detected by two external sensors, and the immediacy of this tracking minimizes the lag and nausea associated with other headsets.",
+        "quantity": "50",
+        "supplierName": "HTC Vive",
+        "img": "https://i.guim.co.uk/img/media/569e6ee38fca495f773d803926704a8facb49813/11_10_979_990/master/979.jpg?width=620&quality=85&auto=format&fit=max&s=c88b7f953f50600d5d00e9c39530655c"
+    }
+]
