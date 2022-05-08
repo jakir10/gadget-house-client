@@ -15,16 +15,18 @@ const Inventories = () => {
 
     return (
         // Inventory section
-        <div className='inventories mt-3'>
-            <h1 className='text-primary text-center mt-5 my-3'>Manage Inventories</h1>
-            <div className='inventories-container'>
-                {
-                    inventories.map(inventory => <Inventory
-                        key={inventory.id}
-                        inventory={inventory}
-                    >
-                    </Inventory>)
-                }
+        <div id='inventories' className='container mt-3'>
+            <div className='row'>
+                <h1 className='text-primary text-center mt-5 my-3'>Manage Inventories</h1>
+                <div className='inventories-container'>
+                    {
+                        inventories.map(inventory => <Inventory
+                            key={inventory.id}
+                            inventory={inventory}
+                        >
+                        </Inventory>)
+                    }
+                </div>
             </div>
         </div>
     );

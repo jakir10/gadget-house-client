@@ -1,9 +1,11 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 const InventoriesDetail = () => {
+    const { inventoryId } = useParams();
     return (
         <div>
-            <h2>Inventories Details</h2>
+            <h2>Inventories Details: {inventoryId}</h2>
         </div>
     );
 };
