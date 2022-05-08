@@ -4,13 +4,13 @@ const Inventory = ({ inventory }) => {
     const { id, name, img, description, price, quantity, supplierName } = inventory;
     return (
         <div>
-            <img src={img} alt="" />
+            <img className='w-100' src={img} alt="" />
             <h2>{name}</h2>
             <p>Price: {price}</p>
             <p><small>{description}</small></p>
             <p>Supplier: {supplierName}</p>
             <p>Quantity: {quantity}</p>
-            <button>Update Item: {name}</button>
+            <button className='btn btn-dark'>Update Item: {name}</button>
         </div>
     );
 };
