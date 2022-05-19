@@ -19,6 +19,10 @@ const Register = () => {
         navigate('/login');
     }
 
+    if (user) {
+        navigate('/home');
+    }
+
 
     const handleRegister = async (event) => {
         event.preventDefault();
