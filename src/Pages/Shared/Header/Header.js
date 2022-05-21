@@ -34,6 +34,25 @@ const Header = () => {
                         </Nav>
                         <Nav>
                             <Nav.Link as={Link} to="about">About</Nav.Link>
+
+                            {/* protected route for only authenticate user */}
+                            {
+                                user && <>
+                                    <Link className='btn btn-link text-white text-decoration-none' to='/additem'>Add Item</Link>
+                                </>
+                            }
+                            {
+                                user && <>
+                                    <Link className='btn btn-link text-white text-decoration-none' to='/myitem'>My Item</Link>
+                                </>
+                            }
+                            {
+                                user && <>
+                                    <Link className='btn btn-link text-white text-decoration-none' to='/manageitem'>Manage Item</Link>
+                                </>
+                            }
+
+                            {/* sign in user and signout link*/}
                             {
                                 user ?
                                     <button className='btn btn-link text-white text-decoration-none' onClick={handleSignOut}>Sign Out</button>
@@ -41,6 +60,7 @@ const Header = () => {
                                     <Nav.Link as={Link} to="login">
                                         Login
                                     </Nav.Link>}
+
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

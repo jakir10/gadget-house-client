@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import useInventories from '../../../hooks/useInventories';
 import Inventory from '../Inventory/Inventory';
 import "./Inventories.css";
 
 const Inventories = () => {
+    const [inventories, setInventories] = useInventories();
 
-    const [inventories, setInventories] = useState([]);
+    // const [inventories, setInventories] = useState([]);
+    const navigate = useNavigate();
 
-    useEffect(() => {
-        fetch('inventory.json')
-            .then(res => res.json())
-            .then(data => setInventories(data));
-    }, [])
+    // useEffect(() => {
+    //     fetch('inventory.json')
+    //         .then(res => res.json())
+    //         .then(data => setInventories(data));
+    // }, []);
 
 
     return (
@@ -20,13 +24,14 @@ const Inventories = () => {
                 <h1 className='text-primary text-center mt-5 my-3'>Manage Inventories</h1>
                 <div className='inventories-container'>
                     {
-                        inventories.map(inventory => <Inventory
+                        inventories.slice(0, 6).map(inventory => <Inventory
                             key={inventory.id}
                             inventory={inventory}
                         >
                         </Inventory>)
                     }
                 </div>
+                <button onClick={() => navigate('/manageitem')} className='btn-inventories w-25 mx-auto mt-5'>See All Inventories</button>
             </div>
         </div>
     );
