@@ -13,6 +13,9 @@ import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import NotFound from './Pages/Shared/NotFound/NotFound';
+import React from 'react';
+import { ToastContainer } from 'react-toastify';
+import Blog from './Pages/Blogs/Blog';
 
 function App() {
   return (
@@ -32,6 +35,7 @@ function App() {
           </RequireAuth>
         }></Route>
         <Route path='/about' element={<About></About>}></Route>
+        <Route path='/blog' element={<Blog></Blog>}></Route>
         {/* private routes after login user */}
         <Route path='additem' element={<AddItem></AddItem>} ></Route>
         <Route path='myitem' element={<Myitem></Myitem>} ></Route>
@@ -41,7 +45,7 @@ function App() {
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
-
+      <ToastContainer />
     </div>
   );
 }

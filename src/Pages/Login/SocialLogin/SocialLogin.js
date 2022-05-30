@@ -8,7 +8,6 @@ import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 const SocialLogin = () => {
 
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-    // const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
     const navigate = useNavigate();
 
     let errorElement;
@@ -25,8 +24,6 @@ const SocialLogin = () => {
         navigate('/home');
     }
 
-
-
     return (
         <div>
             <div className='d-flex align-items-center'>
@@ -40,7 +37,7 @@ const SocialLogin = () => {
                     onClick={() => signInWithGoogle()}
                     className='btn btn-primary w-50 d-block mx-auto my-2'>
                     <img style={{ width: '40px' }} src={google} alt="" />
-                    <span className='px-2'>Google Sign in</span>
+                    <span className='px-2'>Sign in with Google</span>
                 </button>
             </div>
         </div>
