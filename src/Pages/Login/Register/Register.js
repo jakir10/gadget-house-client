@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import './Register.css';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import useToken from '../../../hooks/useToken';
 
 const Register = () => {
 
@@ -14,13 +15,18 @@ const Register = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
 
+    //  user profile update
+    // const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+    const [token] = useToken(user);
+
     //for navigate from register page to login page
     const navigate = useNavigate();
     const navigateLogin = () => {
         navigate('/login');
     }
 
-    if (user) {
+    if (token) {
         navigate('/home');
     }
 
@@ -32,7 +38,7 @@ const Register = () => {
         const password = event.target.password.value;
 
         // await 
-        createUserWithEmailAndPassword(email, password);
+        // createUserWithEmailAndPassword(email, password);
         // await updateProfile({ displayName: name });
         // alert('Updated profile');
         // navigate('/home');
