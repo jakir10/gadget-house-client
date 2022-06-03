@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
-import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Button, Form, Toast } from 'react-bootstrap';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import useToken from '../../../hooks/useToken';
 import Loading from '../../Shared/Loading/Loading';
@@ -24,14 +25,17 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-    const [token] = useToken(user);
+    // const [token] = useToken(user);
 
 
-    if (loading) {
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
+    if (loading || sending) {
         return <Loading></Loading>
     }
 
-    if (token) {
+
+    if (user) {
         navigate(from, { replace: true });
     }
 
@@ -56,6 +60,18 @@ const Login = () => {
         navigate('/register')
     }
 
+    const resetPasswrod = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Sent email');
+        } {
+            toast('Please Enter your email');
+        }
+    }
+
+
+
     return (
         <div className='container w-50 mx-auto'>
             <h2 className='text-primary text-center mt-5 py-5'>Please Login</h2>
@@ -73,6 +89,7 @@ const Login = () => {
             </Form>
             {errorElement}
             <p>Don't have an account? <Link to={'/register'} className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
+            <p>Forget Password <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPasswrod}>Reset Password</button></p>
             <SocialLogin></SocialLogin>
         </div>
     );

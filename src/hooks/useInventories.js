@@ -2,10 +2,9 @@ import { useEffect, useState } from "react";
 
 const useInventories = () => {
     const [inventories, setInventories] = useState([]);
-    // const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('inventory.json')
+        fetch('https://pacific-falls-91567.herokuapp.com/inventory')
             .then(res => res.json())
             .then(data => setInventories(data));
     }, []);

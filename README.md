@@ -10,7 +10,6 @@ Gadget House is a warehouse of all types of gadgets like smart phone,watch, head
 [warehouse-management-server-side](here heroku server link)
 
 
-
 ### Website Features and Functionality.
 * Sign in with verification.
 * Protected route for user & Admin.
@@ -24,8 +23,6 @@ Gadget House is a warehouse of all types of gadgets like smart phone,watch, head
 * Node js
 * javascript
 * React Bootstrap
-* Tailwind css
-* Daisy UI Component
 * Express js
 * React Router
 * Firebase

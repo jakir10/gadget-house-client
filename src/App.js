@@ -14,7 +14,8 @@ import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import NotFound from './Pages/Shared/NotFound/NotFound';
 import React from 'react';
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Blog from './Pages/Blogs/Blog';
 
 function App() {
@@ -37,9 +38,21 @@ function App() {
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
         {/* private routes after login user */}
-        <Route path='additem' element={<AddItem></AddItem>} ></Route>
-        <Route path='myitem' element={<Myitem></Myitem>} ></Route>
-        <Route path='manageitem' element={<ManageItems></ManageItems>} ></Route>
+        <Route path='additem' element={
+          <RequireAuth>
+            <AddItem></AddItem>
+          </RequireAuth>
+        } ></Route>
+        <Route path='myitem' element={
+          <RequireAuth>
+            <Myitem></Myitem>
+          </RequireAuth>
+        } ></Route>
+        <Route path='manageitem' element={
+          <RequireAuth>
+            <ManageItems></ManageItems>
+          </RequireAuth>
+        } ></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>

@@ -5,7 +5,7 @@ const Blog = () => {
     return (
         <>
             <h2 className='text-center text-primary mt-5'>My Blog</h2>
-            <Accordion>
+            <Accordion className='container'>
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>1. Difference between javascript and nodejs</Accordion.Header>
                     <Accordion.Body>

@@ -6,15 +6,9 @@ import "./Inventories.css";
 
 const Inventories = () => {
     const [inventories, setInventories] = useInventories();
-
-    // const [inventories, setInventories] = useState([]);
     const navigate = useNavigate();
 
-    useEffect(() => {
-        fetch(`https://pacific-falls-91567.herokuapp.com/inventory`)
-            .then(res => res.json())
-            .then(data => setInventories(data));
-    }, []);
+
 
 
     return (
